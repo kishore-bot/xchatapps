@@ -1,0 +1,309 @@
+{
+	"info": {
+		"_postman_id": "a63e4779-6a23-461c-8551-de0a55e9372f",
+		"name": "Chat App Https",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22428353"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Jpeg\",\r\n    \"email\": \"rf@gmail.com\",\r\n    \"phoneNo\": 98195767891,\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/auth/signup"
+			},
+			"response": [
+				{
+					"name": "signup",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"a\",\r\n    \"email\": \"a@gmail.com\",\r\n    \"phoneNo\":1211111221,\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/auth/signup"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "189"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bd-+Vj5FwZuoPERtk3RH13BO3gafOE\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 22 Feb 2024 02:39:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZDZiM2Q1MDcxMzM1ZWNjZjJkY2YwNCIsImVtYWlsIjoiZEBnbWFpbC5jb20iLCJpYXQiOjE3MDg1Njk1NTd9.4TU5g2EX8bFbJ4NbTN6r6R3ZiQmfzra8G910vu2jcmI\"\n}"
+				}
+			]
+		},
+		{
+			"name": "sigin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"c@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/auth/signIn"
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Y2NhMmM4ZTZjYmJhMTM4NjU2ZTkwNCIsImVtYWlsIjoiYUBnbWFpbC5jb20iLCJpYXQiOjE3MDc5MDk4MzJ9.d_CfFimaTehMVLdde3HR9dpfHZRY1Tqhsh4qWIjCGJs"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/user"
+			},
+			"response": []
+		},
+		{
+			"name": "SendMessage",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZDcxZjIzMTg0MGZiODMwOTJiYTAwMSIsImVtYWlsIjoiYUBnbWFpbC5jb20iLCJpYXQiOjE3MDg1OTcwMjd9.YWEBDd7TPar_wvZjNGOHHpSDMUmxI4TQrp1RS_TZSXA"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:3000/user/personal/65d71f411840fb83092ba004"
+			},
+			"response": []
+		},
+		{
+			"name": "createGroup",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZDZiNzU1MDcxMzM1ZWNjZjJkY2Y5MyIsImVtYWlsIjoiYUBnbWFpbC5jb20iLCJpYXQiOjE3MDg1NzA0NTN9.vhSu5eUBPpZw5cY7UEtho2iQUJAt96NOG5pE_2HVP7A"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"groupName\": \"Youth\",\r\n    \"groupDesc\": \"Something Testing\",\r\n    \"userId\": [\r\n        { \"id\": \"65d6b76e071335eccf2dcf96\" },\r\n        { \"id\": \"65d6b77a071335eccf2dcf99\" },\r\n        { \"id\": \"65d6b784071335eccf2dcf9c\" },\r\n        { \"id\": \"65d6b795071335eccf2dcf9f\" }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/user/group"
+			},
+			"response": []
+		},
+		{
+			"name": "GetME",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZDRjY2M3YmNlN2M0ZGRkMDNkMzcwNiIsImVtYWlsIjoiY0BnbWFpbC5jb20iLCJpYXQiOjE3MDg0NDQ4NzF9.4LidaQupkQ1OGGE8-BNjr4EhyE1FP9iqZaDWzR_ZyBY"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/user/me"
+			},
+			"response": []
+		},
+		{
+			"name": "FetchGroupChatDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZDRjY2M3YmNlN2M0ZGRkMDNkMzcwNiIsImVtYWlsIjoiY0BnbWFpbC5jb20iLCJpYXQiOjE3MDg0NDQ4NzF9.4LidaQupkQ1OGGE8-BNjr4EhyE1FP9iqZaDWzR_ZyBY"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"65d4cb12d6ba1715c8d44c3b\",\r\n    \"chatId\":\"65d5bc5190b7f6cb6978f0dc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/user/g_chat"
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZDlkMjAzMDU0MzNhYjgzZGNhZGU2ZiIsImVtYWlsIjoiZEBnbWFpbC5jb20iLCJpYXQiOjE3MDg3ODM2ODl9.-A6bqzF0v5dzI9w3CTqF1lwWYG8KZ28Wy05no24_bNo"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "picture",
+							"type": "file",
+							"src": "/C:/Users/kisho/Downloads/pexels-philippe-donn-1133957.jpg"
+						}
+					]
+				},
+				"url": "http://localhost:3000/file/profile"
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZDcxZjIzMTg0MGZiODMwOTJiYTAwMSIsImVtYWlsIjoiYUBnbWFpbC5jb20iLCJpYXQiOjE3MDg2MDA3NTN9.eeqJIbaMawrPDz34wp114G7rM9RYNSHQju46GOeJkZU"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/search?user=e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"search"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchFriends",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZDZiNzU1MDcxMzM1ZWNjZjJkY2Y5MyIsImVtYWlsIjoiYUBnbWFpbC5jb20iLCJpYXQiOjE3MDg1OTMyNTB9.s4HYgR7FOA6nyY0X55GIk5ydUBzCFCqT-OoEoe8Ekis"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/user/friends"
+			},
+			"response": []
+		},
+		{
+			"name": "FriendReq",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZDlmNzkxMGU2NzdlZTRlNzdkMGYxOCIsImVtYWlsIjoiYXZAZ21haWwuY29tIiwiaWF0IjoxNzA4NzgzNzg3fQ.2ThmPF9uaitikzxuC7M0dQWhfVQgT96VJCcOcVXoWPA"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:3000/user/request/65d9d15b05433ab83dcade56"
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch RecievedReq",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZDk2YWFiNTVhYzVlNDk3ZDNjMzRkYyIsImVtYWlsIjoiZUBnbWFpbC5jb20iLCJpYXQiOjE3MDg3NTEyOTB9.slA5HzQpy8ct91Wb-5c4jWtu-ZjwD9gmOcA1MnVRNUE"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/user/received/req"
+			},
+			"response": []
+		},
+		{
+			"name": "Accept Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZDk2YWFiNTVhYzVlNDk3ZDNjMzRkYyIsImVtYWlsIjoiZUBnbWFpbC5jb20iLCJpYXQiOjE3MDg3NTEyOTB9.slA5HzQpy8ct91Wb-5c4jWtu-ZjwD9gmOcA1MnVRNUE"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:3000/user/accept/65d96a2f55ac5e497d3c34c1"
+			},
+			"response": []
+		}
+	]
+}
