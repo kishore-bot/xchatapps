@@ -40,6 +40,8 @@ XChat Backend is the server-side component of the XChat application, responsible
 
 5. The server should now be running locally. You can access it at `http://localhost:3000`.
 
+6. The API endpoints and their usage are documented in detail. You can find the API documentation [here](https://github.com/kishore-bot/xchatapps/blob/main/files/Chat%20App%20Https.postman_collection.json).
+
 
 
 ## Contact
