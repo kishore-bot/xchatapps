@@ -1,0 +1,55 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+./Backend/node_modules
+
+local.properties
+
+
+# compiled output
+Backend/dist
+Backend/node_modules
+
+
+# Logs
+Backend/logs
+Backend/*.log
+Backend/npm-debug.log*
+Backend/pnpm-debug.log*
+Backend/yarn-debug.log*
+Backend/yarn-error.log*
+Backend/lerna-debug.log*
+
+# OS
+Backend/.DS_Store
+
+# Tests
+Backend/coverage
+Backend/.nyc_output
+
+# IDEs and editors
+Backend/.idea
+Backend/.project
+Backend/.classpath
+Backend/.c9/
+Backend/*.launch
+Backend/.settings/
+Backend/*.sublime-workspace
+
+# IDE - VSCode
+Backend/.vscode/*
+Backend/!.vscode/settings.json
+Backend/!.vscode/tasks.json
+Backend/!.vscode/launch.json
+Backend/!.vscode/extensions.json
