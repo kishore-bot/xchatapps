@@ -36,7 +36,7 @@ XChat is a real-time chat application built with Jetpack Compose for the fronten
 - Node.js Cron Jobs
 
 ### App UI
-![Home Screen]([https://example.com/xchat_logo.png](https://github.com/kishore-bot/xchatapps/blob/main/files/Home.png))
+![Home Screen](https://github.com/kishore-bot/xchatapps/blob/main/files/Home.png)
 
 ### Code
 - Ui on app folder
